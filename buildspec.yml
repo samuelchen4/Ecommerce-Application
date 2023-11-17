@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18.17.0 # Choose your preferred Node.js version
+    commands:
+      - echo Installing backend dependencies...
+      - npm install # Install Node.js backend dependencies
+
+  pre_build:
+    commands:
+      - echo Installing frontend dependencies...
+      - cd fontend # Change to the directory where your React frontend resides
+      - npm install # Install React frontend dependencies
+
+  build:
+    commands:
+      - echo Building...
+      - npm run build # Build the React frontend
+
+artifacts:
+  files:
+    - frontend/build/**/* # Specify the location of the built frontend files
+    - backend/**/* # Specify the location of the backend files
+    - node_modules/**/* # Backend node modules
+    - package.json
+    - package-lock.json
