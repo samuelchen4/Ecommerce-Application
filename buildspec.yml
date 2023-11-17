@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14 # Choose your preferred Node.js version
+      nodejs: 12 # Choose your preferred Node.js version
     commands:
       - echo Installing backend dependencies...
       - npm install # Install Node.js backend dependencies
