@@ -6,4 +6,4 @@ pwd
 
 # Install Node.js dependencies (if needed)
 # Example: Run npm install for the server
-
+npm install
