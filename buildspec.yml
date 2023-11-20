@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       nodejs: 12 # Choose your preferred Node.js version
     commands:
-      - echo Installing backend dependencies...
-      - npm install # Install Node.js backend dependencies
+      # - echo Installing backend dependencies...
+      # - npm install # Install Node.js backend dependencies
 
   pre_build:
     commands:
@@ -23,6 +23,6 @@ artifacts:
   files:
     - frontend/build/**/* # Specify the location of the built frontend files
     - backend/**/* # Specify the location of the backend files
-    - node_modules/**/* # Backend node modules
     - package.json
     - package-lock.json
+    - appspec.yml
